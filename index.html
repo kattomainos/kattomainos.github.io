@@ -120,11 +120,11 @@
       }
     </style>
 </head>
-<body class="bg-helsinki-ice text-on-surface antialiased">
+<body class="bg-helsinki-ice text-on-surface antialiased overflow-x-hidden">
 <!-- Navigation Shell -->
 <header class="bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/10">
 <div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-<div class="text-headline-md font-headline-md font-extrabold tracking-tighter text-primary dark:text-on-surface">
+<div class="text-headline-md font-headline-md font-extrabold tracking-tighter text-primary dark:text-on-surface whitespace-nowrap">
             Kattomainos.fi</div>
 <nav class="hidden md:flex gap-8 items-center">
 <a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary font-button-text text-button-text" href="#housing">Taloyhtiöille</a>
@@ -132,23 +132,23 @@
 <a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors font-button-text text-button-text" href="#process">Prosessi</a>
 <a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors font-button-text text-button-text" href="#faq">FAQ</a>
 </nav>
-<a class="bg-primary text-on-primary px-6 py-3 rounded-full font-button-text text-button-text hover:opacity-90 transition-all active:scale-95 inline-block text-center" href="#contact-form">Ota yhteyttä</a>
+<a class="bg-primary text-on-primary px-5 md:px-6 py-2.5 md:py-3 rounded-full font-button-text text-button-text hover:opacity-90 transition-all active:scale-95 inline-block text-center ml-4" href="#contact-form">Ota yhteyttä</a>
 </div>
 </header>
 <main>
 <!-- Hero Section -->
-<section class="relative pt-20 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<section class="relative pt-12 md:pt-20 pb-16 md:pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="grid lg:grid-cols-2 gap-12 items-center transition-all duration-1000 opacity-100 translate-y-0">
 <div class="z-10 order-1">
-<h1 class="font-headline-xl text-headline-xl mb-6 text-primary tracking-tighter">
+<h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl mb-6 text-primary tracking-tighter">
                     Käyttämätön katto voi olla taloyhtiön <span class="text-secondary">uusi tulonlähde.</span>
 </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant mb-10 max-w-xl">
                     Kattomainos.fi auttaa taloyhtiöitä hyödyntämään näkyvän kattotilan kaupallisesti — hoidamme selvitykset, lupaprosessit, mainostajat ja operoinnin.
                 </p>
 <div class="flex flex-col sm:flex-row gap-4">
 <a class="bg-primary text-on-primary px-8 py-4 rounded-full font-button-text text-button-text hover:bg-slate-depth transition-all flex items-center justify-center gap-2" href="#contact-form">Arvioi kattosi potentiaali<span class="material-symbols-outlined">north_east</span></a>
-<button class="bg-white border border-outline-variant text-primary px-8 py-4 rounded-full font-button-text text-button-text hover:bg-helsinki-ice transition-all flex items-center justify-center">
+<button class="bg-white border border-outline-variant text-primary px-8 py-4 rounded-full font-button-text text-button-text hover:bg-helsinki-ice transition-all flex items-center justify-center" onclick="location.href='#contact-form'">
                         Varaa maksuton kartoitus
                     </button>
 </div>
@@ -157,7 +157,7 @@
 <div class="aspect-[4/5] rounded-3xl overflow-hidden sky-shadow">
 <img class="w-full h-full object-cover" data-alt="A cinematic, low-angle shot of a modern residential building in Helsinki under a clear, bright Nordic sky. The architecture features clean lines, large glass windows, and a prominent flat rooftop that overlooks a bustling urban street. The lighting is crisp and high-contrast, emphasizing the premium and innovative nature of urban advertising spaces. The color palette is dominated by cool blues, whites, and deep architectural shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVHYWdwZO25SGOuCA_-AFW7twRYj6d6xfyZeHjND7mpnOqaya5k5LjxWAVEmMWjxKJTQEf_ewaGnaSvrYSBuYNKi719pGbRBq9nG4_DRdjQZODZSW_bDljTAixNJ6MgTBQPzCG3MBjA5ZPfoXh1XBKfMA5zuAIbqf3hdSp0da744OH9mBPp-V02jVQzQ_umsGhvshcmHFrs_gB8vcVommYomqHm9UqHz5t5yuP75kxz-JhyVdShVmPXVtTU4Ott29-5iRf-RS6HXv8">
 </div>
-<div class="absolute glass p-6 rounded-2xl border border-white/20 sky-shadow min-w-[280px] top-1/2 left-1/2 -translate-y-1/2 z-20" style="left: 40px; transform: translateY(-50%);">
+<div class="absolute glass p-5 md:p-6 rounded-2xl border border-white/20 sky-shadow min-w-[240px] md:min-w-[280px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:-translate-x-0 lg:left-10 z-20">
 <div class="flex items-center gap-4 mb-4">
 <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white">
 <span class="material-symbols-outlined">payments</span>
@@ -171,82 +171,87 @@
 </div>
 </section>
 <!-- Intro Section (Helsinki Focus) -->
-<section class="py-section-gap bg-white">
+<section class="py-16 md:py-section-gap bg-white">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center transition-all duration-1000 opacity-100 translate-y-0">
 <div class="max-w-3xl mx-auto">
-<h2 class="font-headline-lg text-headline-lg mb-8">Helsingin katot ovat alihyödynnetty resurssi.</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Helsingin katot ovat alihyödynnetty resurssi.</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
                     Monet kaupunkien näkyvimmistä katoista eivät tällä hetkellä tuota taloyhtiöille mitään. Samaan aikaan brändit etsivät uusia tapoja näkyä kaupungin keskeisimmillä paikoilla, kun taloyhtiöt kamppailevat kasvavien kustannusten ja suurten remonttien kanssa. Kattomainos.fi yhdistää nämä kaksi maailmaa tavalla, joka kunnioittaa kaupunkikuvaa ja rakennuksen arkkitehtuuria.
                 </p>
 </div>
 </div>
 </section>
 <!-- What the housing company gets -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="housing">
-<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 transition-all duration-1000 opacity-100 translate-y-0">
+<section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="housing">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-4 transition-all duration-1000 opacity-100 translate-y-0">
 <div>
 <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-4">Taloyhtiön edut</span>
-<h2 class="font-headline-lg text-headline-lg">Uutta kassavirtaa ilman remonttia.</h2>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg break-words">Uutta kassavirtaa ilman remonttia.</h2>
 </div>
 </div>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-gutter transition-all duration-1000 opacity-100 translate-y-0">
-<div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/10 hover:border-secondary/30 transition-all group">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter transition-all duration-1000 opacity-100 translate-y-0 overflow-hidden w-full">
+<div class="bg-surface-container-low p-8 md:p-10 rounded-xl border border-outline-variant/10 hover:border-secondary/30 transition-all group">
 <span class="material-symbols-outlined text-4xl text-secondary mb-6 block group-hover:scale-110 transition-transform">bolt</span>
 <h3 class="font-headline-md text-headline-md mb-4">Energiahankkeet</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Rahoita maalämpö tai aurinkopaneelit kattosi tuottamalla passiivisella tulolla.</p>
 </div>
-<div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/10 hover:border-secondary/30 transition-all group">
+<div class="bg-surface-container-low p-8 md:p-10 rounded-xl border border-outline-variant/10 hover:border-secondary/30 transition-all group">
 <span class="material-symbols-outlined text-4xl text-secondary mb-6 block group-hover:scale-110 transition-transform">trending_down</span>
 <h3 class="font-headline-md text-headline-md mb-4">Vastikepaineen pienentäminen</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Ennaltaehkäise hoitovastikkeiden nousua hyödyntämällä olemassa olevaa passiivista neliötilaa.</p>
 </div>
-<div class="bg-surface-container-low p-10 rounded-xl border border-outline-variant/10 hover:border-secondary/30 transition-all group">
+<div class="bg-surface-container-low p-8 md:p-10 rounded-xl border border-outline-variant/10 hover:border-secondary/30 transition-all group">
 <span class="material-symbols-outlined text-4xl text-secondary mb-6 block group-hover:scale-110 transition-transform">account_balance</span>
 <h3 class="font-headline-md text-headline-md mb-4">Tulevien remonttien puskuri</h3>
 <p class="font-body-md text-body-md text-on-surface-variant">Kerrytä taloyhtiölle puskurirahastoa tulevia investointeja varten ilman asukkaisiin kohdistuvaa rasitetta.</p>
 </div>
-<div class="lg:col-span-3 relative rounded-xl overflow-hidden min-h-[300px]"><img class="absolute inset-0 w-full h-full object-cover" data-alt="Architectural view of buildings along a canal, showcasing premium urban spaces and rooftop potential." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOrlW6zmJsb2CokRxwLAWM7w_HG2bGqIZCP0s1bmt7iUibnz6e4w7s8T-kQ9V1Al6QBef8kD9ldj5hZhBiwaUKJvj1GCEzqVgjpiznG1EJqujT2zuUAOVAK6Pp6PImOUoey_Pf-iPN77lWKOdc71dFJYoF0dK_AXeIdspFR1UG2lNpUMOklqlIJHCmdDpVhUvX26l8eMDcLePsbq9tQVQVOrmxCrJWkGcjEB_MEjixZ2bPpEpCfSFfwvWPMB_BQ7ilsZo6R5SL6059SYg"><div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-10"><p class="text-white font-headline-md text-headline-md">Hoidamme koko elinkaaren puolestanne.</p></div></div>
+<div class="lg:col-span-3 relative rounded-xl overflow-hidden min-h-[300px] md:min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Architectural view of buildings along a canal, showcasing premium urban spaces and rooftop potential." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOrlW6zmJsb2CokRxwLAWM7w_HG2bGqIZCP0s1bmt7iUibnz6e4w7s8T-kQ9V1Al6QBef8kD9ldj5hZhBiwaUKJvj1GCEzqVgjpiznG1EJqujT2zuUAOVAK6Pp6PImOUoey_Pf-iPN77lWKOdc71dFJYoF0dK_AXeIdspFR1UG2lNpUMOklqlIJHCmdDpVhUvX26l8eMDcLePsbq9tQVQVOrmxCrJWkGcjEB_MEjixZ2bPpEpCfSFfwvWPMB_BQ7ilsZo6R5SL6059SYg">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent flex items-end p-8 md:p-10">
+<p class="text-white font-headline-md text-headline-lg-mobile md:text-headline-md">Hoidamme koko elinkaaren puolestanne.</p>
+</div>
+</div>
 </div>
 </section>
 <!-- Process Section -->
-<section class="py-section-gap bg-primary-container text-on-primary" id="process">
+<section class="py-16 md:py-section-gap bg-primary-container text-on-primary" id="process">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
-<h2 class="font-headline-lg text-headline-lg text-white mb-20 text-center">Saumaton prosessi taloyhtiölle.</h2>
-<div class="grid md:grid-cols-5 gap-8">
-<div class="relative">
-<div class="text-secondary font-headline-xl text-headline-xl mb-4 opacity-50">01</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white mb-16 md:mb-20 text-center">Saumaton prosessi taloyhtiölle.</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 md:gap-8">
+<div class="relative text-center md:text-left">
+<div class="text-secondary font-headline-xl text-4xl md:text-headline-xl mb-4 opacity-50">01</div>
 <h4 class="font-headline-md text-headline-md text-white mb-3">Kartoitus</h4>
 <p class="font-body-md text-body-md text-on-primary-container">Kartoitamme katon näkyvyyden ja kaupallisen potentiaalin.</p>
-<div class="hidden md:block absolute top-12 -right-4 text-secondary/30">
+<div class="hidden lg:block absolute top-12 -right-4 text-secondary/30">
 <span class="material-symbols-outlined">trending_flat</span>
 </div>
 </div>
-<div class="relative">
-<div class="text-secondary font-headline-xl text-headline-xl mb-4 opacity-50">02</div>
+<div class="relative text-center md:text-left">
+<div class="text-secondary font-headline-xl text-4xl md:text-headline-xl mb-4 opacity-50">02</div>
 <h4 class="font-headline-md text-headline-md text-white mb-3">Selvitys</h4>
 <p class="font-body-md text-body-md text-on-primary-container">Selvitämme tekniset toteutusmahdollisuudet rakenteisiin.</p>
-<div class="hidden md:block absolute top-12 -right-4 text-secondary/30">
+<div class="hidden lg:block absolute top-12 -right-4 text-secondary/30">
 <span class="material-symbols-outlined">trending_flat</span>
 </div>
 </div>
-<div class="relative">
-<div class="text-secondary font-headline-xl text-headline-xl mb-4 opacity-50">03</div>
+<div class="relative text-center md:text-left">
+<div class="text-secondary font-headline-xl text-4xl md:text-headline-xl mb-4 opacity-50">03</div>
 <h4 class="font-headline-md text-headline-md text-white mb-3">Lupaprosessi</h4>
 <p class="font-body-md text-body-md text-on-primary-container">Hoidamme koko rakennuslupa- ja viranomaisprosessin.</p>
-<div class="hidden md:block absolute top-12 -right-4 text-secondary/30">
+<div class="hidden lg:block absolute top-12 -right-4 text-secondary/30">
 <span class="material-symbols-outlined">trending_flat</span>
 </div>
 </div>
-<div class="relative">
-<div class="text-secondary font-headline-xl text-headline-xl mb-4 opacity-50">04</div>
+<div class="relative text-center md:text-left">
+<div class="text-secondary font-headline-xl text-4xl md:text-headline-xl mb-4 opacity-50">04</div>
 <h4 class="font-headline-md text-headline-md text-white mb-3">Myynti</h4>
 <p class="font-body-md text-body-md text-on-primary-container">Hankimme premium-tason mainostajat paikallesi.</p>
-<div class="hidden md:block absolute top-12 -right-4 text-secondary/30">
+<div class="hidden lg:block absolute top-12 -right-4 text-secondary/30">
 <span class="material-symbols-outlined">trending_flat</span>
 </div>
 </div>
-<div>
-<div class="text-secondary font-headline-xl text-headline-xl mb-4 opacity-50">05</div>
+<div class="text-center md:text-left">
+<div class="text-secondary font-headline-xl text-4xl md:text-headline-xl mb-4 opacity-50">05</div>
 <h4 class="font-headline-md text-headline-md text-white mb-3">Operointi</h4>
 <p class="font-body-md text-body-md text-on-primary-container">Operoimme ja ylläpidämme mainospintaa jatkuvasti.</p>
 </div>
@@ -254,17 +259,17 @@
 </div>
 </section>
 <!-- Building Permits Focus -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="grid lg:grid-cols-2 gap-20 items-center transition-all duration-1000 opacity-100 translate-y-0">
+<section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center transition-all duration-1000 opacity-100 translate-y-0 overflow-hidden w-full">
 <div class="order-2 lg:order-1">
-<div class="aspect-square rounded-full overflow-hidden sky-shadow border-8 border-white">
+<div class="aspect-square rounded-full overflow-hidden sky-shadow border-4 md:border-8 border-white max-w-md mx-auto">
 <img class="w-full h-full object-cover" data-alt="Aerial view of modern residential towers and buildings by the frozen sea in Helsinki, showcasing high-value urban real estate and rooftop potential." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcvSwDRKKa3k5xCyxnQ395YSiK3l-OGUzCeFdvzMrOvftZN9gYI5AZFAcdoRFMZYtjpOrRfRY2ix2OzbQ97O8vuiKcFy0bASsRn0sonvDbgXE6nNGLgcEFEDXBcTvl0l83lgncETBGDCe3qqXIef_Oqmg_Lm-NX2bORQrnK6L-i-p5z502VMZz6LPycdAGCqxTr7BQsMRuxq3MRBoy_ZhlPm5_xAGq4Zhi9VA-qtGyDfkBqO_nVf-XLW7FsWpqOfpTpBvngnHcobkV">
 </div>
 </div>
 <div class="order-1 lg:order-2">
 <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-4">Viranomaisyhteistyö</span>
-<h2 class="font-headline-lg text-headline-lg mb-8">Rakennuslupaprosessi ei kuulu yksin taloyhtiön hoidettavaksi.</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8 break-words">Rakennuslupaprosessi ei kuulu yksin taloyhtiön hoidettavaksi.</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant mb-10">
                     Me Kattomainoksella tunnemme kaupunkikuvan säädökset ja rakennusvalvonnan vaatimukset. Taloyhtiön hallituksen ei tarvitse käyttää aikaansa byrokratiaan, vaan me olemme prosessin moottorina alusta loppuun.
                 </p>
 <ul class="space-y-4">
@@ -285,48 +290,47 @@
 </div>
 </section>
 <!-- Why Kattomainos -->
-<section class="py-section-gap bg-white">
+<section class="py-16 md:py-section-gap bg-white">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center transition-all duration-1000 opacity-100 translate-y-0">
-<div class="text-center mb-20">
-<h2 class="font-headline-lg text-headline-lg mb-4">Miksi valita Kattomainos.fi?</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Luotettava kumppani, joka maksimoi taloyhtiön hyödyn ja minimoi vaivan.</p>
+<div class="text-center mb-12 md:mb-20">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Miksi valita Kattomainos.fi?</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant max-w-2xl mx-auto">Luotettava kumppani, joka maksimoi taloyhtiön hyödyn ja minimoi vaivan.</p>
 </div>
-<div class="grid gap-8 justify-center items-center lg:grid-cols-4 justify-items-center">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
 <div class="text-center flex flex-col items-center">
 <div class="w-16 h-16 bg-surface-container mx-auto flex items-center justify-center rounded-2xl mb-6">
-<span class="material-symbols-outlined text-secondary">hourglass_top</span>
+<span class="material-symbols-outlined text-secondary text-3xl">hourglass_top</span>
 </div>
 <h4 class="font-headline-md text-headline-md text-lg mb-3">Pitkäaikainen lisätulo</h4>
 </div>
 <div class="text-center flex flex-col items-center">
 <div class="w-16 h-16 bg-surface-container mx-auto flex items-center justify-center rounded-2xl mb-6">
-<span class="material-symbols-outlined text-secondary">visibility_off</span>
+<span class="material-symbols-outlined text-secondary text-3xl">visibility_off</span>
 </div>
 <h4 class="font-headline-md text-headline-md text-lg mb-3">Ei aktiivista operointia</h4>
 </div>
 <div class="text-center flex flex-col items-center">
 <div class="w-16 h-16 bg-surface-container mx-auto flex items-center justify-center rounded-2xl mb-6">
-<span class="material-symbols-outlined text-secondary">layers</span>
+<span class="material-symbols-outlined text-secondary text-3xl">layers</span>
 </div>
 <h4 class="font-headline-md text-headline-md text-lg mb-3">Hyödynnä käyttämätön tila</h4>
 </div>
 <div class="text-center flex flex-col items-center">
 <div class="w-16 h-16 bg-surface-container mx-auto flex items-center justify-center rounded-2xl mb-6">
-<span class="material-symbols-outlined text-secondary">star</span>
+<span class="material-symbols-outlined text-secondary text-3xl">star</span>
 </div>
 <h4 class="font-headline-md text-headline-md text-lg mb-3">Premium-mainostajat</h4>
 </div>
-
 </div>
 </div>
 </section>
 <!-- For Advertisers -->
-<section class="py-section-gap relative bg-slate-depth text-white" id="advertisers">
+<section class="py-16 md:py-section-gap relative bg-slate-depth text-white" id="advertisers">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10 transition-all duration-1000 opacity-100 translate-y-0">
-<div class="grid lg:grid-cols-2 gap-20 items-center">
+<div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 <div>
-<h2 class="font-headline-lg text-headline-lg mb-8">Mainostaja! Näy siellä missä kaupunki katsoo.</h2>
-<p class="font-body-lg text-body-lg text-on-primary-container mb-12">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Mainostaja! Näy siellä missä kaupunki katsoo.</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-primary-container mb-12">
                         Tarjoamme brändeille pääsyn Helsingin eksklusiivisimmille mainospaikoille. Kattomainonta ei ole vain mainos; se on osa kaupungin siluettia ja viesti laadusta.
                     </p>
 <div class="space-y-6">
@@ -345,29 +349,29 @@
 </div>
 </div>
 </div>
-<a class="mt-12 bg-secondary text-white px-8 py-4 rounded-full font-button-text text-button-text hover:bg-secondary-container transition-all inline-block text-center" href="#contact-form">Ota yhteyttä</a>
+<a class="mt-12 w-full sm:w-auto bg-secondary text-white px-8 py-4 rounded-full font-button-text text-button-text hover:bg-secondary-container transition-all inline-block text-center" href="#contact-form">Ota yhteyttä</a>
 </div>
 <div class="grid grid-cols-2 gap-4">
-<div class="aspect-[3/4] rounded-2xl overflow-hidden mt-12">
-<img class="w-full h-full object-cover" data-alt="A striking vertical shot of a modern glass skyscraper in a metropolitan business district during the 'blue hour' of dusk. The building's upper floors are illuminated from within, and its reflective surfaces catch the city lights. The image conveys high-end commercial prestige and the immense value of visible urban space. Cool blue and dark navy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT7QSz8hfiSiMx0-Qi0KbK14K0DkonsYjKlm8LKP7JViqjE2VNe-JUP0HL3KX4W_t7LTDc1fo_lzPV4YSSc4xBY287CM5ZCb-RWRB2IYFirTK0A2l4ul4oKuyGw7vv5etUnFUvMLlMdx4dqN6S69ipRaNbQcnjAmHxlQLjvdUxZJDI5iXWTDTanT6R9A-KyfWMkxf_tto4oMF7UFI60YWVWpDO-_wvYHd6FLY_qabnKohJSuOkPBSejei_pshLxi08NPrNJcRlNGCsw0A">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden mt-8 md:mt-12">
+<img class="w-full h-full object-cover" data-alt="A striking vertical shot of a modern glass skyscraper in a metropolitan business district during the 'blue hour' of dusk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT7QSz8hfiSiMx0-Qi0KbK14K0DkonsYjKlm8LKP7JViqjE2VNe-JUP0HL3KX4W_t7LTDc1fo_lzPV4YSSc4xBY287CM5ZCb-RWRB2IYFirTK0A2l4ul4oKuyGw7vv5etUnFUvMLlMdx4dqN6S69ipRaNbQcnjAmHxlQLjvdUxZJDI5iXWTDTanT6R9A-KyfWMkxf_tto4oMF7UFI60YWVWpDO-_wvYHd6FLY_qabnKohJSuOkPBSejei_pshLxi08NPrNJcRlNGCsw0A">
 </div>
 <div class="aspect-[3/4] rounded-2xl overflow-hidden">
-<img class="w-full h-full object-cover" data-alt="A wide, panoramic view of a city skyline at sunset, with golden light washing over rooftops and historical buildings. In the foreground, a prominent rooftop space is showcased as a prime canvas for high-impact visual communication. The atmosphere is majestic, warm, and elite, emphasizing the transformative power of urban advertising." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaae6XNCMbDdbpIMfTurO9nHl4Nw_p8czYUiuxzr_NtjTievpvhIkVBkcHjiCZQI9ZtRj5ik8wrhkHGChiPmifcqLvqD97OaP2YGBmq34IQud4hlTxkwyy3LWNAlt_7jrzizVEJI7ezabd_kHcpxYWZdIDGm0gnxq8DyJ-GCIVaAUfiuEvMJm7eIgRa0KCTT7ynF1tFnH3Dhx7uRla1W4MV4zBA7hIdnQ71meCMY-Jnn8KliR-iN0JHDOcnxpDGD8OD488QHHL4_js">
+<img class="w-full h-full object-cover" data-alt="A wide, panoramic view of a city skyline at sunset." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaae6XNCMbDdbpIMfTurO9nHl4Nw_p8czYUiuxzr_NtjTievpvhIkVBkcHjiCZQI9ZtRj5ik8wrhkHGChiPmifcqLvqD97OaP2YGBmq34IQud4hlTxkwyy3LWNAlt_7jrzizVEJI7ezabd_kHcpxYWZdIDGm0gnxq8DyJ-GCIVaAUfiuEvMJm7eIgRa0KCTT7ynF1tFnH3Dhx7uRla1W4MV4zBA7hIdnQ71meCMY-Jnn8KliR-iN0JHDOcnxpDGD8OD488QHHL4_js">
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- Alert/Manifesto Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto text-center" id="manifesto">
+<section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto text-center" id="manifesto">
 <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-6">Selvitä potentiaali ennen naapuria</span>
-<h2 class="font-headline-lg text-headline-lg mb-8 leading-tight">Naapuritalon katto voi olla huomisen näkyvin mainospaikka - Ole siis nopea.</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8 leading-tight break-words">Naapuritalon katto voi olla huomisen näkyvin mainospaikka - Ole siis nopea.</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant">
             Kaikki rakennukset eivät sovellu mainoskäyttöön, eikä kaupunki mahdollista rajatonta määrää toteutuksia. Siksi ensimmäisten joukossa liikkeellä olevat taloyhtiöt ovat usein parhaassa asemassa.
         </p>
 </section>
 <!-- Referenssi Section -->
-<section class="py-20 bg-helsinki-ice" id="reference">
+<section class="py-16 md:py-20 bg-helsinki-ice" id="reference">
 <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
 <div class="flex flex-col items-center">
 <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-6">Referenssi</span>
@@ -379,32 +383,32 @@
 </div>
 </section>
 <!-- FAQ Section -->
-<section class="py-section-gap bg-surface-container-low" id="faq">
+<section class="py-16 md:py-section-gap bg-surface-container-low" id="faq">
 <div class="px-margin-mobile md:px-margin-desktop max-w-[800px] mx-auto transition-all duration-1000 opacity-100 translate-y-0">
-<h2 class="font-headline-lg text-headline-lg mb-12 text-center">Usein kysytyt kysymykset</h2>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-12 text-center">Usein kysytyt kysymykset</h2>
 <div class="space-y-4">
-<details class="group bg-white rounded-xl p-6 border border-outline-variant/10 cursor-pointer sky-shadow">
+<details class="group bg-white rounded-xl p-5 md:p-6 border border-outline-variant/10 cursor-pointer sky-shadow">
 <summary class="flex justify-between items-center font-headline-md text-headline-md text-lg list-none">
                         Vaikuttaako mainos asukkaiden elämään?
                         <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <p class="mt-4 font-body-md text-body-md text-on-surface-variant">Ei. Mainokset sijoitetaan teknisesti niin, etteivät ne aiheuta valosaastetta tai näköhaittaa asunnoille. Hoidamme kaikki tekniset selvitykset etukäteen.</p>
 </details>
-<details class="group bg-white rounded-xl p-6 border border-outline-variant/10 cursor-pointer sky-shadow">
+<details class="group bg-white rounded-xl p-5 md:p-6 border border-outline-variant/10 cursor-pointer sky-shadow">
 <summary class="flex justify-between items-center font-headline-md text-headline-md text-lg list-none">
                         Kuka vastaa huollosta ja sähkökuluista?
                         <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <p class="mt-4 font-body-md text-body-md text-on-surface-variant">Kattomainos vastaa täysin kaikista kuluista ja operoinnista. Taloyhtiölle kuluja ei synny missään vaiheessa.</p>
 </details>
-<details class="group bg-white rounded-xl p-6 border border-outline-variant/10 cursor-pointer sky-shadow">
+<details class="group bg-white rounded-xl p-5 md:p-6 border border-outline-variant/10 cursor-pointer sky-shadow">
 <summary class="flex justify-between items-center font-headline-md text-headline-md text-lg list-none">
                         Minkälaisia mainostajia katoille tulee?
                         <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
 </summary>
 <p class="mt-4 font-body-md text-body-md text-on-surface-variant">Hyväksymme vain premium-tason brändejä. Taloyhtiöllä on aina lopullinen sana-valta mainostajan tyypistä.</p>
 </details>
-<details class="group bg-white rounded-xl p-6 border border-outline-variant/10 cursor-pointer sky-shadow">
+<details class="group bg-white rounded-xl p-5 md:p-6 border border-outline-variant/10 cursor-pointer sky-shadow">
 <summary class="flex justify-between items-center font-headline-md text-headline-md text-lg list-none">
                         Miten sopimuskaudet toimivat?
                         <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
@@ -415,38 +419,38 @@
 </div>
 </section>
 <!-- Final CTA -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<div class="bg-primary rounded-[2rem] p-12 md:p-20 relative overflow-hidden text-center text-white transition-all duration-1000 opacity-100 translate-y-0">
+<section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="bg-primary rounded-[1.5rem] md:rounded-[2rem] p-8 md:p-20 relative overflow-hidden text-center text-white transition-all duration-1000 opacity-100 translate-y-0">
 <div class="relative z-10 max-w-2xl mx-auto">
-<h2 class="font-headline-lg text-headline-lg mb-6">Selvitetään voisiko kattosi tuottaa.</h2>
-<p class="font-body-lg text-body-lg text-on-primary-container mb-12">Ilmainen kartoitus ei sido taloyhtiötä mihinkään. Saat asiantuntija-arvion kattosi potentiaalista 48 tunnissa.</p>
-<div class="flex flex-col sm:flex-row gap-6 justify-center">
-<a class="bg-secondary text-white px-10 py-5 rounded-full font-button-text text-button-text hover:bg-secondary-container transition-all flex items-center justify-center gap-2" href="#contact-form">Aloita kartoitus nyt<span class="material-symbols-outlined">rocket_launch</span></a>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Selvitetään voisiko kattosi tuottaa.</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-primary-container mb-12">Ilmainen kartoitus ei sido taloyhtiötä mihinkään. Saat asiantuntija-arvion kattosi potentiaalista 48 tunnissa.</p>
+<div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
+<a class="bg-secondary text-white px-10 py-4 md:py-5 rounded-full font-button-text text-button-text hover:bg-secondary-container transition-all flex items-center justify-center gap-2" href="#contact-form">Aloita kartoitus nyt<span class="material-symbols-outlined">rocket_launch</span></a>
 </div>
 </div>
 <!-- Abstract visual elements -->
-<div class="absolute top-0 right-0 w-96 h-96 bg-secondary/20 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
-<div class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+<div class="absolute top-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-secondary/20 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-secondary/10 blur-[120px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
 </div>
 </section>
 <!-- Contact Form Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="contact-form">
+<section class="py-16 md:py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="contact-form">
 <div class="max-w-4xl mx-auto transition-all duration-1000 opacity-100 translate-y-0">
-<div class="text-center mb-16">
+<div class="text-center mb-12 md:mb-16">
 <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-4">Ota yhteyttä</span>
-<h2 class="font-headline-lg text-headline-lg mb-4 text-primary">Keskustellaan mahdollisuuksista.</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">Jätä viesti, niin olemme sinuun yhteydessä 24 tunnin sisällä.</p>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4 text-primary break-words">Keskustellaan mahdollisuuksista.</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant">Jätä viesti, niin olemme sinuun yhteydessä 24 tunnin sisällä.</p>
 </div>
-<form action="https://formsubmit.co/myynti@kattomainos.fi" class="grid grid-cols-1 md:grid-cols-2 gap-gutter bg-white p-8 md:p-12 rounded-xl sky-shadow border border-outline-variant/10" method="POST">
+<form action="https://formsubmit.co/myynti@kattomainos.fi" class="grid grid-cols-1 md:grid-cols-2 gap-gutter bg-white p-6 md:p-12 rounded-xl sky-shadow border border-outline-variant/10" method="POST">
 <input name="_subject" type="hidden" value="Uusi yhteydenotto - Kattomainos.fi">
 <input name="_captcha" type="hidden" value="false">
 <div class="space-y-2">
 <label class="font-label-sm text-label-sm text-on-surface-variant block ml-1" for="name">Nimi</label>
-<input class="w-full px-6 py-4 rounded-lg bg-surface-container-low border border-outline-variant/20 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md" id="name" name="nimi" placeholder="Etu- ja sukunimi" type="text">
+<input class="w-full px-6 py-4 rounded-lg bg-surface-container-low border border-outline-variant/20 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md" id="name" name="nimi" placeholder="Etu- ja sukunimi" required="" type="text">
 </div>
 <div class="space-y-2">
 <label class="font-label-sm text-label-sm text-on-surface-variant block ml-1" for="email">Sähköposti</label>
-<input class="w-full px-6 py-4 rounded-lg bg-surface-container-low border border-outline-variant/20 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md" id="email" name="email" placeholder="nimi@yritys.fi" type="email">
+<input class="w-full px-6 py-4 rounded-lg bg-surface-container-low border border-outline-variant/20 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md" id="email" name="email" placeholder="nimi@yritys.fi" required="" type="email">
 </div>
 <div class="space-y-2 md:col-span-2">
 <label class="font-label-sm text-label-sm text-on-surface-variant block ml-1" for="phone">Puhelinnumero</label>
@@ -457,7 +461,7 @@
 <textarea class="w-full px-6 py-4 rounded-lg bg-surface-container-low border border-outline-variant/20 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md min-h-[150px]" id="message" name="viesti" placeholder="Kerro lyhyesti miten voimme auttaa..."></textarea>
 </div>
 <div class="md:col-span-2 pt-4">
-<button class="w-full bg-primary text-on-primary py-5 rounded-full font-button-text text-button-text hover:bg-slate-depth transition-all flex items-center justify-center gap-3 active:scale-[0.98]" type="submit">
+<button class="w-full bg-primary text-on-primary py-4 md:py-5 rounded-full font-button-text text-button-text hover:bg-slate-depth transition-all flex items-center justify-center gap-3 active:scale-[0.98]" type="submit">
                         Lähetä viesti
                         <span class="material-symbols-outlined">send</span>
 </button>
@@ -468,19 +472,19 @@
 </main>
 <!-- Footer Shell -->
 <footer class="bg-primary-container dark:bg-surface-container-highest mt-20">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-gutter w-full px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap max-w-container-max mx-auto">
 <div class="lg:col-span-1">
-<div class="text-headline-md font-headline-md font-bold text-on-primary-container mb-6">
+<div class="text-headline-md font-headline-md font-bold text-white mb-6">
                 Kattomainos
             </div>
-<p class="font-body-md text-body-md text-on-primary-fixed-variant mb-6">Kattomainos auttaa taloyhtiöitä muuttamaan näkyvänn kattotilan tai käyttämättömän muun pinta-alan uudeksi vuokratuotoksi tavalla, joka kunnioittaa rakennuksen arkkitehtuuria ja kaupunkikuvaa.</p>
+<p class="font-body-md text-body-md text-on-primary-fixed-variant mb-6">Kattomainos auttaa taloyhtiöitä muuttamaan näkyvän kattotilan tai käyttämättömän muun pinta-alan uudeksi vuokratuotoksi tavalla, joka kunnioittaa rakennuksen arkkitehtuuria ja kaupunkikuvaa.</p>
 </div>
 <div>
 <h5 class="font-headline-md text-headline-md text-lg text-white mb-6">Palvelut</h5>
 <ul class="space-y-4">
 <li class=""><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#housing">Taloyhtiöille</a></li>
 <li class=""><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#advertisers">Mainostajille</a></li>
-<li class=""><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">Lupaprosessi</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#process">Lupaprosessi</a></li>
 </ul>
 </div>
 <div>
@@ -490,11 +494,9 @@
 </ul>
 </div>
 </div>
-<div class="border-t border-white/10 py-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="border-t border-white/10 py-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center">
 <p class="font-label-sm text-label-sm text-on-primary-fixed-variant">© 2026 Kattomainos. Kaikki oikeudet pidätetään.</p>
 <div class="flex gap-6">
-
-
 </div>
 </div>
 </footer>
@@ -518,8 +520,6 @@
         observer.observe(section);
     });
 </script>
-
-
 
 
 </body></html>
