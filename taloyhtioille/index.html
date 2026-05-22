@@ -1,0 +1,576 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="fi" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kattomainos - Taloyhtiöille</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#bec6e0",
+                        "surface-container": "#e6eeff",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-primary": "#ffffff",
+                        "outline": "#76777d",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "primary-container": "#131b2e",
+                        "surface-tint": "#565e74",
+                        "surface-dim": "#ccdbf3",
+                        "electric-violet": "#5B21B6",
+                        "surface-container-high": "#dce9ff",
+                        "on-tertiary-fixed": "#341100",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed-variant": "#004395",
+                        "on-secondary-container": "#fefcff",
+                        "surface": "#f8f9ff",
+                        "inverse-surface": "#233144",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "on-background": "#0d1c2e",
+                        "on-tertiary-container": "#d95f00",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "helsinki-ice": "#F8FAFC",
+                        "on-surface-variant": "#45464d",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "tertiary-fixed": "#ffdbca",
+                        "on-primary-container": "#7c839b",
+                        "slate-depth": "#1E293B",
+                        "surface-container-low": "#eff4ff",
+                        "on-tertiary-fixed-variant": "#783200",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface-container-highest": "#d5e3fc",
+                        "surface-variant": "#d5e3fc",
+                        "inverse-primary": "#bec6e0",
+                        "primary": "#000000",
+                        "on-secondary-fixed": "#001a42",
+                        "tertiary-container": "#341100",
+                        "secondary": "#0058be",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#131b2e",
+                        "on-surface": "#0d1c2e",
+                        "outline-variant": "#c6c6cd",
+                        "background": "#f8f9ff",
+                        "primary-fixed": "#dae2fd",
+                        "surface-bright": "#f8f9ff",
+                        "secondary-container": "#2170e4",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["JetBrains Mono"],
+                        "button-text": ["Sora"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Sora"],
+                        "headline-lg-mobile": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "headline-md": ["Sora"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "button-text": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .sky-shadow {
+            box-shadow: 0 32px 64px -16px rgba(37, 99, 235, 0.08);
+        }
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+        }
+
+        /* Animations */
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal-hidden {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+            .reveal-visible {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
+            
+            .floating {
+                animation: floating 3s ease-in-out infinite;
+            }
+            
+            @keyframes floating {
+                0% { transform: translateY(-50%) translateX(0px); }
+                50% { transform: translateY(-55%) translateX(5px); }
+                100% { transform: translateY(-50%) translateX(0px); }
+            }
+
+            .btn-hover-shimmer {
+                position: relative;
+                overflow: hidden;
+            }
+            .btn-hover-shimmer::after {
+                content: '';
+                position: absolute;
+                top: -50%;
+                left: -60%;
+                width: 20%;
+                height: 200%;
+                background: rgba(255, 255, 255, 0.2);
+                transform: rotate(30deg);
+                transition: all 0.6s ease;
+            }
+            .btn-hover-shimmer:hover::after {
+                left: 130%;
+            }
+
+            details[open] summary ~ * {
+                animation: sweep .4s ease-in-out;
+            }
+            @keyframes sweep {
+                0%    {opacity: 0; transform: translateY(-10px)}
+                100%  {opacity: 1; transform: translateY(0)}
+            }
+        }
+    </style>
+</head>
+<body class="bg-helsinki-ice text-on-surface font-body-md overflow-x-hidden antialiased">
+<!-- Navigation -->
+<header class="bg-surface/80 dark:bg-surface-container/80 backdrop-blur-xl border-b border-outline-variant/10 docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md font-extrabold tracking-tighter text-primary dark:text-on-surface">
+<a class="font-headline-md text-headline-md font-extrabold text-primary" href="/">Kattomainos.fi</a>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-secondary dark:text-secondary-fixed font-bold border-b-2 border-secondary text-button-text font-button-text" href="/taloyhtioille/">Taloyhtiöille</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors text-button-text font-button-text" href="/#advertisers">Mainostajille</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors text-button-text font-button-text" href="#prosessi">Prosessi</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors text-button-text font-button-text" href="/#manifesto">Manifesti</a>
+<a class="text-on-surface-variant dark:text-outline hover:text-primary transition-colors text-button-text font-button-text" href="#faq">FAQ</a>
+</nav>
+<a class="bg-primary text-on-primary px-6 py-3 rounded-full font-button-text text-button-text hover:bg-secondary hover:scale-105 active:scale-95 transition-all inline-block text-center btn-hover-shimmer" href="#contact">
+            Ota yhteyttä
+        </a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="relative order-1 reveal-hidden reveal-visible" id="hero-visual">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden sky-shadow">
+<img alt="Helsinki urban rooftop landscape" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKPfsQb8MhdWHRk03ecZV83QCN_UaPkVVNd4DMj3Zd7t_PRm_O0od2Rr5bUjMrx56XkpCF67mBfzRd5fvKcnLmlgW20j1-67YuehqLCNGcvc7HQflRvUnv_I24O2SpcS_lD01Qh4DXYgHNN2qx6CcttbkTo5R3qH7vr6TbIUa97PNzN4YBhG8rT-Ytf_6Z1mDbbk6lciDEvu60t_NK_x6rVgX9iKQcsD2jElyajRn8_peCIHFrYP7XlfMQFfx8gPvv8NR9Q2yn_qROQLc">
+</div>
+<!-- Glassmorphism Card -->
+<div class="absolute glass p-6 rounded-2xl border border-white/40 sky-shadow glow-blue min-w-[280px] top-1/2 right-4 -translate-y-1/2 z-20 floating reveal-hidden reveal-visible" id="hero-card">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Tuloarvio</span>
+</div>
+<p class="font-headline-md text-headline-md font-bold mb-1 text-primary">3 000 - 10 000€</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Vuotuinen passiivinen tulonlähde taloyhtiölle.</p>
+</div>
+</div>
+<div class="z-10 order-2 reveal-hidden reveal-visible" id="hero-text">
+<span class="inline-block bg-secondary/10 text-secondary px-3 py-1 rounded-sm text-label-sm font-label-sm mb-6">UUSI TULONLÄHDE</span>
+<h1 class="font-headline-xl text-headline-xl mb-6 text-primary tracking-tighter">
+Muuta näkyvä kattotila pitkäaikaiseksi vuokratuotoksi.
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl leading-relaxed">
+Kattomainos auttaa taloyhtiöitä selvittämään, voisiko rakennuksen katolla tai julkisivulla olla kaupallista arvoa.
+</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-secondary text-white px-8 py-4 rounded-full font-button-text text-button-text hover:opacity-90 hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-secondary/20 btn-hover-shimmer" href="#contact">
+                        Aloita ilmainen kartoitus <span class="material-symbols-outlined">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Intro Section -->
+<section class="py-section-gap bg-white">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal-hidden reveal-visible">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="order-2 lg:order-1">
+<img alt="Modern residential architecture" class="w-full rounded-3xl sky-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF79DN-n7YGzAiu1UC7jD2YsCULd58r6r0EVz9WQvNI_9jKzto7U1NEvjs3C6ikdTdbSTgQL2aFm1y11TUQXwJOWiIOLNZiuRIGQ_kYrvNite_rXL6YUkuUWGobhOZa8wJIzjs1uzTz2i2JEmbgS-NdtirCa9xgg_SZOI_pVQ1MA0NhdWhpJqDx6GV9ca0eE1GE5MdcLvl2Ft95DWdy-T1GmqDkAC7ZRZ_lFEdXfzGQTD-WaCqJc1faaJkmen-zNHiZ6rxn1lZI_eR">
+</div>
+<div class="order-1 lg:order-2 space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">Maksimoi taloyhtiön potentiaali</h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                        Monet taloyhtiöt kamppailevat nousevien hoitokustannusten ja massiivisten remonttipaineiden alla. Samaan aikaan Helsingin keskeisimmillä paikoilla sijaitsee tuhansia neliöitä arvokasta "ilmatilaa", jota ei hyödynnetä.
+                    </p>
+<p class="text-body-md text-on-surface-variant">
+                        Kattomainos auttaa taloyhtiöitä tunnistamaan ja kaupallistamaan nämä resurssit kestävällä ja arkkitehtuuria kunnioittavalla tavalla.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- What We Do -->
+<section class="py-section-gap bg-helsinki-ice">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal-hidden reveal-visible">
+<div class="text-center mb-16">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-4">PalVELUMME</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Mitä Kattomainos tekee?</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-white p-10 rounded-2xl sky-shadow border border-outline-variant/10 hover:border-secondary/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 group-hover:text-electric-violet transition-all">analytics</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Potentiaalianalyysi</h3>
+<p class="text-on-surface-variant font-body-md">Arvioimme katon tai julkisivun kaupallisen arvon perustuen sijaintiin, näkyvyyteen ja liikennevirtoihin.</p>
+</div>
+<div class="bg-white p-10 rounded-2xl sky-shadow border border-outline-variant/10 hover:border-secondary/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 group-hover:text-electric-violet transition-all">construction</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Tekninen toteutus</h3>
+<p class="text-on-surface-variant font-body-md">Analysoimme rakenteellisen kantavuuden ja tekniset vaatimukset asennukselle varmistaen kestävyyden.</p>
+</div>
+<div class="bg-white p-10 rounded-2xl sky-shadow border border-outline-variant/10 hover:border-secondary/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:scale-110 group-hover:text-electric-violet transition-all">description</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Lupaprosessi</h3>
+<p class="text-on-surface-variant font-body-md">Hoidamme monimutkaiset kaupunkikuvalliset ja rakennusvalvonnalliset luvat ammattitaidolla puolestasi.</p>
+</div>
+</div>
+<div class="mt-16 text-center">
+<a class="inline-flex items-center gap-2 bg-white border border-outline-variant text-primary px-8 py-4 rounded-full font-button-text text-button-text hover:bg-helsinki-ice hover:scale-105 active:scale-95 transition-all shadow-sm" href="#contact">
+                    Pyydä asiantuntija paikalle
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Process Complexity -->
+<section class="py-section-gap bg-white" id="prosessi">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal-hidden reveal-visible">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="space-y-8">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block">Osaaminen</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Mainoslaite katolla ei ole yksinkertainen prosessi</h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                        Mainoslaitteen sijoittaminen vaatii syvällistä osaamista arkkitehtuurista, valaistustekniikasta ja teräsrakenteista. Me varmistamme, että laite on turvallinen, energiatehokas ja sopii saumattomasti kaupunkikuvaan.
+                    </p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4 group">
+<span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-full group-hover:bg-secondary group-hover:text-white transition-colors">check_circle</span>
+<div>
+<span class="font-bold text-primary block text-headline-md text-lg">Tekninen rakenne</span>
+<p class="text-on-surface-variant font-body-md">Lujuuslaskelmat ja turvallinen kiinnitys rakennuksen runkoon ilman riskejä.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 group">
+<span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-full group-hover:bg-secondary group-hover:text-white transition-colors">check_circle</span>
+<div>
+<span class="font-bold text-primary block text-headline-md text-lg">Hienovarainen valaistus</span>
+<p class="text-on-surface-variant font-body-md">Valosaasteen minimointi ja asukkaiden asumisviihtyvyyden turvaaminen uusimmalla tekniikalla.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative reveal-hidden reveal-visible">
+<img alt="Architecture details" class="rounded-3xl sky-shadow relative z-10 w-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_MAio0scSc4kO1nDCBs0I8fq_mEV3daYrQxTzv1Ln7RFVwxkcBeVlxDaSgd2zosY9htdbYqMt9f7cLl-Y-DQYMb6i40KlDCSrKnLcbJ1hB61OXvqI4scGGhxkvOCsXhcbILl9sIc_lf7Tfkv8wVv4oxrqq59qsfc7Q7ULnfRgO2VU0izDAsLg37GQQzYMU2pRoIR7ce4yLBjnQGFVGW6JQWm50C5oOMpiuH9Tjc8GbCSTghw2hCCiOoiRN8kDe4wMQyeJHRbqUSRJ">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary/5 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Section -->
+<section class="py-section-gap bg-slate-depth text-white overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal-hidden reveal-visible">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-7 bg-white/5 p-12 rounded-3xl border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors duration-500">
+<h2 class="font-headline-lg text-headline-lg mb-6 tracking-tight">Ymmärrämme kaupunkikuvan merkityksen</h2>
+<p class="text-body-lg text-on-primary-container leading-relaxed mb-8">
+                        Emme vain myy mainospaikkoja; me kuratoimme Helsinkiä. Jokainen toteutus suunnitellaan kunnioittamaan ympäröivää skaalaa ja pitkän aikavälin visuaalista laatua.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<span class="px-6 py-2 border border-white/20 rounded-full text-label-sm font-label-sm uppercase tracking-widest hover:border-secondary transition-colors">LAATU</span>
+<span class="px-6 py-2 border border-white/20 rounded-full text-label-sm font-label-sm uppercase tracking-widest hover:border-secondary transition-colors">SKAALA</span>
+</div>
+</div>
+<div class="md:col-span-5 bg-secondary p-12 rounded-3xl flex flex-col justify-between hover:bg-secondary/90 transition-all duration-500 hover:scale-[1.02]">
+<div>
+<h3 class="font-headline-md text-headline-md mb-4 text-white">Kaikille katoille ei voida toteuttaa ratkaisuja.</h3>
+<p class="text-white/90 font-body-md leading-relaxed">Kriteerimme ovat tiukat. Siksi varhainen kartoitus on kriittinen, jotta parhaat paikat eivät mene hukkaan naapurustossa.</p>
+</div>
+<div class="mt-8 flex justify-end">
+<span class="material-symbols-outlined text-6xl text-white/30 animate-pulse">verified_user</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- New Image Section -->
+<section class="py-section-gap bg-white overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal-hidden reveal-visible">
+<div class="relative rounded-[2rem] overflow-hidden aspect-[21/9] sky-shadow">
+<img alt="Helsinki city center aerial view" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfIjORhxIgYnC5DjFF6c5yzGnzFqIVZjYfIZkB-g4RDrezaDnSvDcBNy6-fNKSwYVxbfmzg-ybIQSg8jZYXISCJK0hL6UaluxqmszgPOXiq57EERmMQDcLFa4LhLWX0ZVHgTabFJtQ8clcM6ll_fiX9fs-X6_tQ_MrGr2xYJJfAgVNIOMMqplpZAFjVapHx5mQePUEpsy6bF2Vpiatkdd0WYQJJBQDP1w2niFqmswW2TsBhKJVkoj7LS4azatPErUfQKm9FTF60vwJ">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-12">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Näkyvyyttä kaupungin sydämessä</h2>
+<p class="text-white/90 font-body-lg">Tunnistamme parhaat sijainnit ja luomme arvoa siellä, missä ihmiset liikkuvat.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Section -->
+<section class="py-section-gap bg-white">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal-hidden reveal-visible">
+<div class="max-w-3xl mx-auto text-center mb-20">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-4">Kumppanuus</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Kattomainos on uuden sukupolven toimija</h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                    Olemme kunnianhimoinen tiimi, joka rakentaa pitkäaikaisia kumppanuuksia taloyhtiöiden kanssa. Emme tavoittele pikavoittoja, vaan kestävää arvonnousua ja kiinteistönne modernisointia.
+                </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<div class="bg-helsinki-ice p-12 rounded-3xl border border-outline-variant/10 sky-shadow hover:shadow-2xl transition-all duration-500">
+<h4 class="font-bold text-headline-md mb-6 text-primary">Mitä taloyhtiö voi saada?</h4>
+<p class="text-on-surface-variant mb-8 font-body-md">Tulot voidaan ohjata suoraan taloyhtiön yhteisiin tavoitteisiin:</p>
+<ul class="space-y-4 font-body-md">
+<li class="flex gap-4 items-center"><span class="text-secondary font-bold font-headline-md text-lg">01</span> Julkisivuremonttien rahoitus</li>
+<li class="flex gap-4 items-center"><span class="text-secondary font-bold font-headline-md text-lg">02</span> Energiatehokkuushankkeet (maalämpö, aurinko)</li>
+<li class="flex gap-4 items-center"><span class="text-secondary font-bold font-headline-md text-lg">03</span> Vastikkeiden pitäminen alhaisina</li>
+</ul>
+<a class="mt-10 inline-flex items-center gap-2 text-secondary font-bold hover:gap-4 transition-all" href="#contact">Selvitetään potentiaali <span class="material-symbols-outlined">east</span></a>
+</div>
+<div class="bg-white p-12 rounded-3xl border border-outline-variant/10 sky-shadow hover:shadow-2xl transition-all duration-500">
+<h4 class="font-bold text-headline-md mb-6 text-primary">Mitä kartoituksessa selvitetään?</h4>
+<p class="text-on-surface-variant mb-8 font-body-md">Ensimmäinen askeleemme on aina maksuton esiselvitys:</p>
+<ul class="space-y-6 font-body-md">
+<li class="flex gap-4 items-center text-on-surface-variant group">
+<span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-full group-hover:scale-110 transition-transform">visibility</span>
+                            Näkyvyyssektorit ja kontaktimäärät
+                        </li>
+<li class="flex gap-4 items-center text-on-surface-variant group">
+<span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-full group-hover:scale-110 transition-transform">gavel</span>
+                            Alueelliset rajoitukset ja lupaehdot
+                        </li>
+<li class="flex gap-4 items-center text-on-surface-variant group">
+<span class="material-symbols-outlined text-secondary bg-secondary/10 p-2 rounded-full group-hover:scale-110 transition-transform">euro</span>
+                            Arvioitu vuotuisen tuoton suuruus
+                        </li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-section-gap bg-helsinki-ice" id="faq">
+<div class="px-margin-mobile md:px-margin-desktop max-w-[800px] mx-auto reveal-hidden reveal-visible">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-16">Usein kysytyt kysymykset</h2>
+<div class="space-y-4">
+<details class="group bg-white rounded-2xl p-6 border border-outline-variant/10 cursor-pointer sky-shadow hover:border-secondary/20 transition-all duration-300" open="">
+<summary class="flex justify-between items-center font-headline-md text-headline-md text-lg list-none">
+                        Aiheuttaako mainoslaite häiriötä asukkaille?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-secondary">expand_more</span>
+</summary>
+<p class="mt-4 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/10 pt-4 leading-relaxed">
+                        Käytämme uusinta teknologiaa, joka suuntaa valon tarkasti halutulle alueelle. Valosensorit himmentävät valaistusta hämärän tullen, ja varmistamme aina, ettei valo heijastu kenenkään ikkunoista sisään.
+                    </p>
+</details>
+<details class="group bg-white rounded-2xl p-6 border border-outline-variant/10 cursor-pointer sky-shadow hover:border-secondary/20 transition-all duration-300">
+<summary class="flex justify-between items-center font-headline-md text-headline-md text-lg list-none">
+                        Kuka vastaa mainoslaitteen kunnossapidosta?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-secondary">expand_more</span>
+</summary>
+<p class="mt-4 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/10 pt-4 leading-relaxed">
+                        Kattomainos vastaa täysimääräisesti laitteen huollosta, kunnossapidosta ja sähkökustannuksista. Taloyhtiölle ei koitu ylläpitokuluja missään vaiheessa.
+                    </p>
+</details>
+<details class="group bg-white rounded-2xl p-6 border border-outline-variant/10 cursor-pointer sky-shadow hover:border-secondary/20 transition-all duration-300">
+<summary class="flex justify-between items-center font-headline-md text-headline-md text-lg list-none">
+                        Kuinka kauan sopimukset yleensä ovat?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-secondary">expand_more</span>
+</summary>
+<p class="mt-4 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/10 pt-4 leading-relaxed">
+                        Suosimme pitkäaikaisia 5-10 vuoden sopimuksia, jotta voimme investoida korkealaatuiseen tekniikkaan ja taata taloyhtiölle vakaan tulovirran pitkälle tulevaisuuteen.
+                    </p>
+</details>
+<details class="group bg-white rounded-2xl p-6 border border-outline-variant/10 cursor-pointer sky-shadow hover:border-secondary/20 transition-all duration-300">
+<summary class="flex justify-between items-center font-headline-md text-headline-md text-lg list-none">
+                        Tarvitaanko asennukseen rakennuslupa?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-secondary">expand_more</span>
+</summary>
+<p class="mt-4 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/10 pt-4 leading-relaxed">
+                        Kyllä, lähes poikkeuksetta. Kattomainos hoitaa koko lupaprosessin kaupungin kanssa taloyhtiön puolesta hyödyntäen vankkaa kokemustamme viranomaisvaatimuksista.
+                    </p>
+</details>
+<details class="group bg-white rounded-2xl p-6 border border-outline-variant/10 cursor-pointer sky-shadow hover:border-secondary/20 transition-all duration-300">
+<summary class="flex justify-between items-center font-headline-md text-headline-md text-lg list-none">
+                        Vaikuttaako mainoslaite katon takuuseen?
+                        <span class="material-symbols-outlined group-open:rotate-180 transition-transform text-secondary">expand_more</span>
+</summary>
+<p class="mt-4 font-body-md text-body-md text-on-surface-variant border-t border-outline-variant/10 pt-4 leading-relaxed">
+                        Asennukset suoritetaan valtuutettujen ammattilaisten toimesta noudattaen valmistajien ohjeita. Käytämme ratkaisuja, jotka eivät vaaranna katon vesitiiveyttä tai takuita.
+                    </p>
+</details>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-section-gap bg-white" id="contact">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal-hidden reveal-visible">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-4">Yhteydenotto</span>
+<h2 class="font-headline-lg text-headline-lg mb-4 text-primary">Selvitetään voisiko kattosi tuottaa.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Jätä yhteystietosi, niin asiantuntijamme tekee alustavan arvion sijainnistasi 48 tunnin sisällä.</p>
+</div>
+<form action="https://formsubmit.co/myynti@kattomainos.fi" class="grid grid-cols-1 md:grid-cols-2 gap-gutter bg-white p-8 md:p-12 rounded-3xl sky-shadow border border-outline-variant/10 hover:shadow-2xl transition-all duration-500" method="POST">
+<input name="_subject" type="hidden" value="Uusi taloyhtiökysely - Kattomainos.fi">
+<input name="_captcha" type="hidden" value="false">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block ml-1" for="name">Nimi</label>
+<input class="w-full px-6 py-4 rounded-xl bg-surface-container-low border border-outline-variant/20 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md" id="name" name="name" placeholder="Etu- ja sukunimi" required="" type="text">
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block ml-1" for="email">Sähköposti</label>
+<input class="w-full px-6 py-4 rounded-xl bg-surface-container-low border border-outline-variant/20 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md" id="email" name="email" placeholder="nimi@yritys.fi" required="" type="email">
+</div>
+<div class="space-y-2 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block ml-1" for="address">Taloyhtiön nimi &amp; osoite</label>
+<input class="w-full px-6 py-4 rounded-xl bg-surface-container-low border border-outline-variant/20 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md" id="address" name="address" placeholder="As Oy Helsingin Katto, Katuosoite 1" required="" type="text">
+</div>
+<div class="space-y-2 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant block ml-1" for="message">Viesti</label>
+<textarea class="w-full px-6 py-4 rounded-xl bg-surface-container-low border border-outline-variant/20 focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all font-body-md min-h-[120px]" id="message" name="message" placeholder="Kerro lyhyesti kohteesta..."></textarea>
+</div>
+<div class="md:col-span-2 pt-4">
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-button-text text-button-text hover:bg-secondary hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-3 shadow-lg shadow-primary/10 btn-hover-shimmer" type="submit">
+                            Lähetä kysely
+                            <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-surface-container-highest">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="lg:col-span-1">
+<div class="text-headline-md font-headline-md font-bold text-on-primary-container mb-6">
+<a class="font-headline-md text-headline-md font-extrabold text-white" href="/">Kattomainos.fi</a>
+</div>
+<p class="font-body-md text-body-md text-on-primary-fixed-variant mb-6 leading-relaxed">
+                Kattomainos auttaa taloyhtiöitä muuttamaan näkyvän kattotilan tai käyttämättömän muun pinta-alan uudeksi vuokratuotoksi tavalla, joka kunnioittaa rakennuksen arkkitehtuuria ja kaupunkikuvaa.
+            </p>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-lg text-white mb-6">Palvelut</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="/taloyhtioille/">Taloyhtiöille</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="/#advertisers">Mainostajille</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#prosessi">Lupaprosessi</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-lg text-white mb-6">Tuki</h5>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#faq">FAQ</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">Tietosuojaseloste</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">Käyttöehdot</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-lg text-white mb-6">Seuraa meitä</h5>
+<div class="flex gap-4">
+<a class="text-on-primary-fixed-variant hover:text-secondary-fixed transition-colors" href="#">
+<span class="font-label-sm">LINKEDIN</span>
+</a>
+</div>
+<p class="mt-12 text-label-sm font-label-sm text-on-primary-fixed-variant">© 2024 Kattomainos. Kaikki oikeudet pidätetään.</p>
+</div>
+</div>
+</footer>
+<script>
+    // Accessibility check for motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReducedMotion) {
+        // Initial entrance for hero items
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroItems = ['hero-text', 'hero-visual', 'hero-card'];
+            heroItems.forEach((id, index) => {
+                setTimeout(() => {
+                    document.getElementById(id)?.classList.add('reveal-visible');
+                }, 200 * (index + 1));
+            });
+        });
+
+        // Scroll reveal logic
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-hidden').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FAQ Toggle Logic
+        const details = document.querySelectorAll("details");
+        details.forEach((targetDetail) => {
+            targetDetail.addEventListener("click", () => {
+                details.forEach((detail) => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute("open");
+                    }
+                });
+            });
+        });
+    } else {
+        // Fallback for reduced motion
+        document.querySelectorAll('.reveal-hidden').forEach(el => {
+            el.classList.remove('reveal-hidden');
+            el.style.opacity = '1';
+        });
+    }
+</script>
+
+
+</body></html>
