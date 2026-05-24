@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="fi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kuinka paljon kattomainos voi tuottaa taloyhtiölle? | Kattomainos.fi</title>
+<meta name="description" content="Kattomainos voi tuottaa taloyhtiölle vuosittain tuhansista euroista merkittäviin summiin. Lue, mitkä tekijät vaikuttavat kattomainoksen arvoon." />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "secondary-fixed": "#d8e2ff",
+          "on-primary-fixed": "#131b2e",
+          "on-secondary-container": "#fefcff",
+          "on-error": "#ffffff",
+          "inverse-on-surface": "#eaf1ff",
+          "background": "#f8f9ff",
+          "surface-variant": "#d5e3fc",
+          "secondary": "#0058be",
+          "helsinki-ice": "#F8FAFC",
+          "tertiary-container": "#341100",
+          "surface-dim": "#ccdbf3",
+          "surface-container": "#e6eeff",
+          "on-surface": "#0d1c2e",
+          "on-surface-variant": "#45464d",
+          "on-secondary-fixed": "#001a42",
+          "on-error-container": "#93000a",
+          "surface-container-high": "#dce9ff",
+          "surface-container-highest": "#d5e3fc",
+          "primary": "#000000",
+          "error-container": "#ffdad6",
+          "on-secondary-fixed-variant": "#004395",
+          "on-primary": "#ffffff",
+          "primary-container": "#131b2e",
+          "on-tertiary": "#ffffff",
+          "on-primary-fixed-variant": "#3f465c",
+          "primary-fixed-dim": "#bec6e0",
+          "primary-fixed": "#dae2fd",
+          "secondary-container": "#2170e4",
+          "tertiary": "#000000",
+          "inverse-primary": "#bec6e0",
+          "surface-bright": "#f8f9ff",
+          "outline": "#76777d",
+          "on-tertiary-fixed": "#341100",
+          "inverse-surface": "#233144",
+          "on-primary-container": "#7c839b",
+          "on-secondary": "#ffffff",
+          "surface-tint": "#565e74",
+          "tertiary-fixed": "#ffdbca",
+          "surface": "#f8f9ff",
+          "secondary-fixed-dim": "#adc6ff",
+          "slate-depth": "#1E293B",
+          "on-tertiary-fixed-variant": "#783200",
+          "surface-container-low": "#eff4ff",
+          "on-background": "#0d1c2e",
+          "error": "#ba1a1a",
+          "electric-violet": "#5B21B6",
+          "on-tertiary-container": "#d95f00",
+          "tertiary-fixed-dim": "#ffb690",
+          "outline-variant": "#c6c6cd",
+          "surface-container-lowest": "#ffffff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "base": "8px",
+          "margin-mobile": "20px",
+          "container-max": "1280px",
+          "margin-desktop": "64px",
+          "section-gap": "120px",
+          "gutter": "24px"
+        },
+        "fontFamily": {
+          "label-sm": ["JetBrains Mono"],
+          "headline-xl": ["Sora"],
+          "body-md": ["Plus Jakarta Sans"],
+          "headline-md": ["Sora"],
+          "headline-lg-mobile": ["Sora"],
+          "headline-lg": ["Sora"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "button-text": ["Sora"]
+        },
+        "fontSize": {
+          "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+          "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+          "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+          "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+          "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+          "button-text": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.02em", "fontWeight": "600"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .glass-nav {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  .prose-content p {
+    margin-bottom: 1.5rem;
+  }
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-xl border-b border-outline-variant/10 bg-surface/80 shadow-sm">
+  <nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="font-headline-md text-headline-md font-bold text-primary">
+      <a class="text-inherit no-underline hover:opacity-90" href="https://kattomainos.fi/">Kattomainos.fi</a>
+    </div>
+    <div class="hidden md:flex items-center gap-8">
+      <a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors" href="#">Taloyhtiöille</a>
+      <a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors" href="#">Mainostajille</a>
+      <a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors" href="#">Prosessi</a>
+      <a class="font-button-text text-button-text text-on-surface-variant hover:text-primary transition-colors" href="#">FAQ</a>
+    </div>
+    <a class="bg-primary text-on-primary px-6 py-3 font-button-text text-button-text hover:opacity-80 transition-opacity active:scale-95 duration-200 inline-block" href="https://kattomainos.fi/#contact-form">
+      Ota yhteyttä
+    </a>
+  </nav>
+</header>
+
+<main class="pt-32">
+
+  <!-- Breadcrumbs -->
+  <nav class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-12">
+    <ol class="flex items-center space-x-2 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+      <li><a class="hover:text-primary transition-colors" href="https://kattomainos.fi/">Etusivu</a></li>
+      <li><span class="material-symbols-outlined text-[14px]">chevron_right</span></li>
+      <li><a class="hover:text-primary transition-colors" href="#">Blogi</a></li>
+      <li><span class="material-symbols-outlined text-[14px]">chevron_right</span></li>
+      <li class="text-primary font-bold"></li>
+    </ol>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-16">
+    <div class="max-w-3xl">
+      <h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-8 leading-tight">Kuinka paljon kattomainos voi tuottaa taloyhtiölle?</h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant mb-0 leading-relaxed">Tähän ei ole yhtä universaalia vastausta — mutta luvut voivat yllättää.</p>
+    </div>
+  </section>
+
+  <!-- Article Layout -->
+  <article class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+    <div class="lg:col-start-3 lg:col-span-8 prose-content">
+
+      <!-- Ingress -->
+      <p class="font-body-lg text-body-lg text-on-surface-variant italic border-l-4 border-secondary pl-6 mb-12">
+        Jokainen rakennus, sijainti ja toteutus arvioidaan erikseen. Joissakin kohteissa kattomainos voi muodostaa maltillisen lisätulon. Näkyvimmissä sijainneissa kyse voi kuitenkin olla pitkäaikaisesta ja merkittävästä vuokratuotosta.
+      </p>
+
+      <p class="text-body-md leading-relaxed">
+        Yksi yleisimmistä kysymyksistä kattomainontaan liittyen on yksinkertainen: kuinka paljon taloyhtiö voi oikeasti tienata kattomainoksella? Alla käymme läpi tärkeimmät tekijät, jotka vaikuttavat tuoton suuruuteen.
+      </p>
+
+      <!-- Kuva 1 -->
+      <figure class="my-16 group">
+        <div class="relative overflow-hidden bg-surface-container aspect-video">
+          <img
+            alt="Helsinki katot ilmasta kuvattuna"
+            class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-700"
+            src="https://unsplash.com/photos/white-and-brown-concrete-building-j0Wrrv1v1HM?w=1200&auto=format&fit=crop&q=80"
+          />
+        </div>
+      </figure>
+
+      <h2 class="font-headline-md text-headline-md text-primary mt-12 mb-6">Miksi rooftop-mainonta kiinnostaa juuri nyt?</h2>
+      <p class="text-body-md leading-relaxed">
+        Mainostajien kiinnostus näkyviä rooftop-mainospaikkoja kohtaan on kasvanut viime vuosina selvästi. Yksi syy tähän on se, että monet brändit haluavat erottua internetmainonnan jatkuvasta kilpailusta ja näkyä fyysisesti osana kaupunkikuvaa.
+      </p>
+      <p class="text-body-md leading-relaxed">
+        Perinteinen näyttävä ulkomainonta kiinnostaa jälleen — erityisesti näkyvät kattomainokset, valomainokset ja premium-tason rooftop-ratkaisut. Pitkäkestoiset ja näkyvät sijainnit voivat rakentaa brändille huomattavasti vahvempaa muistijälkeä kuin nopeasti ohitettava digitaalinen mainonta. Siksi parhaista rooftop-mainospaikoista kilpaillaan usein pitkäaikaisilla sopimuksilla.
+      </p>
+
+      <h2 class="font-headline-md text-headline-md text-primary mt-12 mb-6">Mikä tekee kattopaikasta arvokkaan?</h2>
+      <p class="text-body-md leading-relaxed">
+        Kaikilla katoilla ei ole kaupallista arvoa. Mainostajien näkökulmasta kiinnostavimpia ovat rakennukset, jotka näkyvät laajasti osana kaupunkikuvaa ja liikennevirtoja.
+      </p>
+
+      <!-- Nostokortit: arvotekijät -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-10">
+        <div class="bg-surface-container-low border border-outline-variant/30 p-6">
+          <span class="material-symbols-outlined text-secondary mb-3 block">traffic</span>
+          <h3 class="font-headline-md text-[16px] text-primary mb-2">Näkyvyys liikenteeseen</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant text-[14px]">Vilkkaiden liikennevirtojen varrella sijaitsevat rakennukset kiinnostavat mainostajia eniten.</p>
+        </div>
+        <div class="bg-surface-container-low border border-outline-variant/30 p-6">
+          <span class="material-symbols-outlined text-secondary mb-3 block">apartment</span>
+          <h3 class="font-headline-md text-[16px] text-primary mb-2">Korkeus ja sijainti</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant text-[14px]">Korkea rakennus keskeisellä paikalla näkyy kauas ja laajalle alueelle.</p>
+        </div>
+        <div class="bg-surface-container-low border border-outline-variant/30 p-6">
+          <span class="material-symbols-outlined text-secondary mb-3 block">storefront</span>
+          <h3 class="font-headline-md text-[16px] text-primary mb-2">Kaupallinen alue</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant text-[14px]">Kaupallisesti aktiiviset alueet houkuttelevat maksavia mainostajia.</p>
+        </div>
+      </div>
+
+      <p class="text-body-md leading-relaxed">
+        Erityisesti näkyvät kulmarakennukset, korkeat rakennukset ja liikenteen solmukohdissa sijaitsevat kohteet voivat olla erittäin kiinnostavia mainostajille.
+      </p>
+
+      <h2 class="font-headline-md text-headline-md text-primary mt-12 mb-6">Kuinka suurista summista voidaan puhua?</h2>
+      <p class="text-body-md leading-relaxed">
+        Mahdollinen tuotto riippuu täysin kohteesta. Pienemmissä ja liikennemääriltään matalammissa sijainneissa kattomainos voi tuottaa esimerkiksi noin 2 000 euroa vuodessa. Näkyvimmissä sijainneissa, vilkkaiden liikennevirtojen äärellä, puhutaan kuitenkin usein huomattavasti suuremmista summista.
+      </p>
+
+      <!-- Tuottoluvut visuaalisesti -->
+      <div class="my-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-surface-container-low border border-outline-variant/30 p-8 flex flex-col gap-2">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Maltillinen sijainti</span>
+          <span class="font-headline-lg text-headline-lg text-primary">~2 000 €</span>
+          <span class="font-body-md text-body-md text-on-surface-variant">vuodessa</span>
+        </div>
+        <div class="bg-primary p-8 flex flex-col gap-2">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container">Näkyvä kantakaupunki</span>
+          <span class="font-headline-lg text-headline-lg text-on-primary">15 000 € +</span>
+          <span class="font-body-md text-body-md text-on-primary-container">vuodessa tai enemmän</span>
+        </div>
+      </div>
+
+      <p class="text-body-md leading-relaxed">
+        Lopullinen arvo riippuu aina rakennuksesta, näkyvyydestä, toteutuksesta ja mainostajien kiinnostuksesta. Siksi jokainen kohde täytyy arvioida yksilöllisesti.
+      </p>
+
+      <!-- Kuva 2 -->
+      <figure class="my-16 group">
+        <div class="relative overflow-hidden bg-surface-container aspect-video">
+          <img
+            alt="Kattomainosrakenne modernissa rakennuksessa"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&auto=format&fit=crop&q=80"
+          />
+        </div>
+      </figure>
+
+      <h2 class="font-headline-md text-headline-md text-primary mt-12 mb-6">Pitkäaikaiset sopimukset kiinnostavat mainostajia</h2>
+      <p class="text-body-md leading-relaxed">
+        Rooftop-mainonta ei ole useimmiten lyhytaikainen kampanja samalla tavalla kuin moni digitaalinen ulkomainos. Näkyvät kattopaikat ovat harvinaisia, minkä vuoksi mainostajat ovat usein kiinnostuneita pitkäaikaisista sopimuksista.
+      </p>
+      <p class="text-body-md leading-relaxed">
+        Taloyhtiön näkökulmasta tämä voi tarkoittaa vakaampaa kassavirtaa, ennustettavuutta ja pitkäaikaista vuokratuottoa. Kun näkyvä kattopaikka saadaan onnistuneesti käyttöön, sama sijainti voi kiinnostaa brändejä vuosien ajan.
+      </p>
+
+      <h2 class="font-headline-md text-headline-md text-primary mt-12 mb-6">Kaikille rakennuksille kattomainonta ei sovi</h2>
+      <p class="text-body-md leading-relaxed">
+        Tämä on tärkeä ymmärtää heti alussa. Kaikki rakennukset eivät sovellu rooftop-mainontaan, eikä näkyviä kattomainoksia voida toteuttaa rajattomasti. Rakennuksen arkkitehtuuri, ympäristö, näkyvyys sekä mahdolliset rakennusvalvonnan ja kaupunkikuvan vaatimukset vaikuttavat kaikki siihen, millainen toteutus voisi olla mahdollinen.
+      </p>
+      <p class="text-body-md leading-relaxed">
+        Joissakin kohteissa kattomainos ei ole realistinen vaihtoehto lainkaan. Toisissa taas rakennuksen näkyvyys voi olla erittäin arvokas.
+      </p>
+
+      <h2 class="font-headline-md text-headline-md text-primary mt-12 mb-6">Mitä Kattomainos tekee?</h2>
+      <p class="text-body-md leading-relaxed">
+        Kattomainos auttaa taloyhtiöitä arvioimaan, voisiko rakennuksen näkyvyydellä olla kaupallista potentiaalia. Käytännössä tämä voi sisältää näkyvyysarvioita, toteutusmahdollisuuksien kartoittamista sekä alustavaa kaupallisen potentiaalin arviointia.
+      </p>
+      <p class="text-body-md leading-relaxed">
+        Tavoitteena on löytää rakennukselle mahdollisimman sopiva ja pitkäaikainen mainoskumppani — ratkaisu, joka toimii sekä kaupallisesti että kaupunkikuvan näkökulmasta.
+      </p>
+
+      <h2 class="font-headline-md text-headline-md text-primary mt-12 mb-6">Miksi asia kannattaa selvittää ajoissa?</h2>
+      <p class="text-body-md leading-relaxed">
+        Näkyvät rooftop-mainospaikat ovat rajallinen resurssi. Kun parhaat sijainnit päätyvät pitkäaikaisiin sopimuksiin, uusia vastaavia mahdollisuuksia syntyy huomattavasti vähemmän. Siksi monet taloyhtiöt haluavat selvittää rakennuksensa potentiaalin mahdollisimman aikaisessa vaiheessa — ennen kuin alueen näkyvimmät kattopaikat ovat jo käytössä.
+      </p>
+
+      <!-- Yhteenveto CTA -->
+      <div class="mt-16 p-1 bg-gradient-to-br from-secondary to-primary rounded-xl">
+        <div class="bg-surface p-8 md:p-12 rounded-lg">
+          <h3 class="font-headline-md text-headline-md text-primary mb-6">Yhteenveto</h3>
+          <p class="font-body-lg text-body-lg mb-8">
+            Kattomainoksen tuotto vaihtelee muutamasta tuhannesta eurosta merkittäviin vuosisummiin — sijainti ja näkyvyys ratkaisevat. Selvitä rakennuksesi potentiaali ennen kuin parhaat paikat on varattu.
+          </p>
+          <div class="flex flex-col md:flex-row items-center justify-between gap-8 pt-8 border-t border-outline-variant/10">
+            <div>
+              <p class="font-headline-md text-headline-md text-primary mb-2">Selvitetään kattosi potentiaali</p>
+              <p class="text-on-surface-variant">Maksuton alustava arviointi taloyhtiöllenne.</p>
+            </div>
+            <a class="bg-primary text-on-primary px-10 py-5 font-button-text text-button-text whitespace-nowrap hover:opacity-90 active:scale-95 transition-all shadow-xl shadow-primary/10 inline-block text-center" href="https://kattomainos.fi/#contact-form">
+              OTA YHTEYTTÄ
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+</main>
+
+<!-- Footer -->
+<footer class="mt-section-gap bg-primary-container border-t border-outline-variant/10">
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="col-span-1 md:col-span-1">
+      <div class="font-headline-md text-headline-md text-on-primary mb-6">Kattomainos.fi</div>
+      <p class="font-body-md text-body-md text-on-primary-container/70 leading-relaxed">
+        Kattomainos tarjoaa rooftop-mainontaa, kattomainoksia ja näkyviä mainosratkaisuja taloyhtiöille.
+      </p>
+    </div>
+    <div>
+      <h4 class="font-button-text text-button-text text-on-primary mb-6">Palvelut</h4>
+      <ul class="space-y-4">
+        <li><a class="font-body-md text-body-md text-on-primary-container/70 hover:text-on-primary transition-colors" href="https://kattomainos.fi/taloyhtioille/">Taloyhtiöille</a></li>
+        <li><a class="font-body-md text-body-md text-on-primary-container/70 hover:text-on-primary transition-colors" href="https://kattomainos.fi/#advertisers">Mainostajille</a></li>
+        <li><a class="font-body-md text-body-md text-on-primary-container/70 hover:text-on-primary transition-colors" href="https://kattomainos.fi/#process">Lupaprosessi</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-button-text text-button-text text-on-primary mb-6">Blogi</h4>
+      <ul class="space-y-4">
+        <li><a class="font-body-md text-body-md text-on-primary-container/70 hover:text-on-primary transition-colors" href="#">Tarvitseeko kattomainos rakennusluvan?</a></li>
+        <li><a class="font-body-md text-body-md text-on-primary-container/70 hover:text-on-primary transition-colors" href="#">Kuinka paljon kattomainos voi tuottaa?</a></li>
+      </ul>
+    </div>
+    <div></div>
+  </div>
+  <div class="border-t border-outline-variant/10 py-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="font-body-md text-body-md text-on-primary-container/50">
+      © 2026 Kattomainos.fi. Kaikki oikeudet pidätetään.
+    </div>
+    <div class="flex gap-6">
+      <span class="material-symbols-outlined text-on-primary-container/50 hover:text-on-primary cursor-pointer transition-colors">public</span>
+      <span class="material-symbols-outlined text-on-primary-container/50 hover:text-on-primary cursor-pointer transition-colors">alternate_email</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const observerOptions = { threshold: 0.1 };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('opacity-100');
+        entry.target.classList.remove('translate-y-4');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('figure').forEach(figure => {
+    figure.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-1000');
+    observer.observe(figure);
+  });
+</script>
+</body>
+</html>
